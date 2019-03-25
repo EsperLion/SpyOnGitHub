@@ -20,6 +20,7 @@ function* userFollowersSaga (action) {
       page = action.payload.page;
       perPage = action.payload.perPage;
     }
+    // TODO parse headers.link to get last page number
     response = yield call(loadUserFollowers, name, page, perPage);
     yield put(requestUserFollowersSuccess(response.data));
   } catch (error) {
