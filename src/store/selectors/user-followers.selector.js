@@ -1,0 +1,1 @@
+export const selectFollowers = (state) => state.userContext.followers.data;
